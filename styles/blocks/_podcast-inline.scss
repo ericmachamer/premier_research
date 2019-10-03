@@ -1,0 +1,68 @@
+.inline-podcast {
+  .podcast-holder {
+    position: relative;
+    .content-holder {
+        border-left: #ededed 15px solid;
+        padding-left: 35px;
+      .sidebar-featured-title {
+        color: $brand-alt;
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-family: $font-family-sans-serif;
+        line-height: 2.4rem;
+        text-transform: uppercase;
+        padding: 0;
+        letter-spacing: .09rem;
+        margin-bottom: 8px;
+      }
+      .sidebar-title {
+        color: $body-font;
+        margin: 0;
+      }
+      .description {
+        font-size: 2rem;
+        font-weight: 500;
+        font-family: GothamNarrow,sans-serif;
+        line-height: 3rem;
+        color: $body-font;
+        margin-bottom: 0;
+        margin-top: 5px;
+      }
+      .btn {
+        padding: 15px 30px;
+      }
+    }
+    .thumbnail-holder {
+      position: relative;
+      .podcast-thumbnail {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: calc(100% - 30px);
+        .thumbnail-image {
+          width: 100%;
+          padding-top: 100%;
+          border-radius: 50%;
+          background: no-repeat center;
+          background-size: cover;
+          margin: 0 auto;
+          position: relative;
+
+          /*&:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 90px;
+            height: 90px;
+            background: url(../images/pr_voices_thumb_icon.png) no-repeat center;
+            background-size: contain;
+          }*/
+        }
+      }
+    }
+  }
+}

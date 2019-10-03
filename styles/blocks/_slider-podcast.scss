@@ -1,0 +1,83 @@
+.slides {
+  &.podcast-slider {
+    @include media-breakpoint-up(xl) {
+      .block-slider {
+        .slide.card {
+          padding-left: 25px;
+          padding-right: 25px;
+        }
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      .block-slider {
+        .slide.card {
+          padding-left: 50px;
+          padding-right: 50px;
+        }
+      }
+    }
+    .background-overlay {
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .heading {
+      color: $white;
+      h2 {
+        color: $white;
+      }
+    }
+    .slide{
+      &.card {
+        .card-img-holder {
+          overflow: hidden;
+          border-radius: 50%;
+          position: relative;
+          /*&:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 90px;
+            height: 90px;
+            background: url(../images/pr_voices_thumb_icon.png) no-repeat center;
+            background-size: contain;
+          }*/
+        }
+        .card-body {
+          color: $white;
+          h3 {
+            color: $white;
+            margin-top: 25px;
+            margin-bottom: 0;
+            font-size: 1.6rem;
+            font-weight: 500;
+            font-family: GothamNarrow,sans-serif;
+            line-height: 2.4rem;
+            text-transform: uppercase;
+            padding: 0;
+            letter-spacing: .09rem;
+          }
+          .text {
+            padding-top: 15px;
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: GothamNarrow,sans-serif;
+            line-height: 3rem;
+            color: $white;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-bottom: 8px;
+          }
+        }
+        .card-footer .btn:not(.video-btn) {
+          @include media-breakpoint-down(xl) {
+            padding: 15px 20px;
+          }
+        }
+      }
+    }
+  }
+}

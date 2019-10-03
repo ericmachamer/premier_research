@@ -1,0 +1,288 @@
+{
+    "key": "group_5cc0bf74a74f6",
+    "title": "Block Part: Two Column Background",
+    "fields": [
+        {
+            "key": "field_5cc0bf74b285a",
+            "label": "Background",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5cc0bf74b28b2",
+            "label": "Column 1 Background",
+            "name": "column_1_background",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5cc0bf74b55ac",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5cc0bf74b55d1",
+                    "label": "Use Paralax Scrolling",
+                    "name": "use_paralax_scrolling",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5cc0bf74b5614",
+                    "label": "Color",
+                    "name": "color",
+                    "type": "select",
+                    "instructions": "When an image is added this will become an overlay. So, use transparency.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "transparent": "Transparent",
+                        "primary": "Blue",
+                        "primary-grad": "Blue Gradient",
+                        "primary-light": "Light Blue",
+                        "primary-light-grad": "Light Blue Gradient",
+                        "secondary": "Yellow",
+                        "secondary-grad": "Yellow Gradient",
+                        "alt": "Orange",
+                        "alt-grad": "Orange Gradient",
+                        "light-gray": "Light Gray",
+                        "dark": "Black",
+                        "dark-grad": "Black Gradient"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5cc0bf74b5657",
+                    "label": "Opacity",
+                    "name": "opacity",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5cc0bf74b5614",
+                                "operator": "!=",
+                                "value": "transparent"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 100,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1
+                }
+            ]
+        },
+        {
+            "key": "field_5cc0bfbc52670",
+            "label": "Column 2 Background",
+            "name": "column_2_background",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5cc0bfbc52671",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5cc0bfbc52672",
+                    "label": "Use Paralax Scrolling",
+                    "name": "use_paralax_scrolling",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5cc0bfbc52673",
+                    "label": "Color",
+                    "name": "color",
+                    "type": "select",
+                    "instructions": "When an image is added this will become an overlay. So, use transparency.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "transparent": "Transparent",
+                        "primary": "Blue",
+                        "primary-grad": "Blue Gradient",
+                        "primary-light": "Light Blue",
+                        "primary-light-grad": "Light Blue Gradient",
+                        "secondary": "Yellow",
+                        "secondary-grad": "Yellow Gradient",
+                        "alt": "Orange",
+                        "alt-grad": "Orange Gradient",
+                        "light-gray": "Light Gray",
+                        "dark": "Black",
+                        "dark-grad": "Black Gradient"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5cc0bfbc52674",
+                    "label": "Opacity",
+                    "name": "opacity",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5cc0bfbc52673",
+                                "operator": "!=",
+                                "value": "transparent"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 100,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/two-column-background"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1560958525
+}

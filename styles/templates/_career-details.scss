@@ -1,0 +1,21 @@
+.job-details {
+  line-height: 2.8rem;
+  &.column-bg {
+    padding-top: 50px;
+  }
+  .back {
+    margin-bottom: 35px;
+    display: inline-block;
+    &:before {
+      content: '';
+      display: inline-block;
+      position: relative;
+      width: 15px;
+      height: 7px;
+      transform: rotate(180deg);
+      background: url(../images/icons-arrow-dark.png) no-repeat center;
+      margin-right: 7px;
+      top: -2px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.resource-callout {
+  &.column-bg .content-block p {
+    margin-bottom: 15px;
+  }
+}
+.insight-holder {
+  &:hover {
+    cursor: pointer;
+    .title-holder {
+      a {
+          opacity: .75;
+      }
+    }
+  }
+  .title-holder {
+    padding: 12px 0 25px;
+    a {
+      font-size: 1.7rem;
+      line-height: 2.7rem;
+      letter-spacing: .03rem;
+      font-family: "Gotham Rounded A","Gotham Rounded B",sans-serif;
+      font-weight: 100;
+      display: block;
+      .dark & {
+        color: $white;
+      }
+    }
+  }
+}

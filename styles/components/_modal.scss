@@ -1,0 +1,19 @@
+/* =================================================================================
+Modal
+================================================================================= */
+@import "../vendor/colorbox";
+
+// override defaults here...
+
+.modal {
+  .modal-dialog {
+    max-width: none;
+    width: 60vw;
+    .modal-content {
+      min-height: 70vh;
+      video {
+        max-width: 100%;
+      }
+    }
+  }
+}

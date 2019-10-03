@@ -1,0 +1,240 @@
+.video-btn-holder {
+  position: relative;
+  @include media-breakpoint-down(md) {
+    order: -1;
+    margin-bottom: 35px;
+  }
+  .wp-video {
+    width: 100% !important;
+    height: auto !important;
+    padding-top: 56.25%;
+    position: absolute;
+    .two-column-bg & {
+      position: relative;
+    }
+    .mejs-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: auto !important;
+      &:not(.active) {
+        background: transparent;
+        .mejs-overlay-play {
+          display: block !important;
+          .mejs-overlay-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            &:hover {
+              transform: translateY(-50%) translateX(-50%) scale(1.15);
+            }
+          }
+        }
+        .mejs-controls {
+          display: none;
+        }
+      }
+      .mejs-overlay-play {
+        .mejs-overlay-button {
+          width: 94px;
+          height: 94px;
+          @include media-breakpoint-down(md) {
+            width: 58px;
+            height: 58px;
+            padding: 0;
+            margin-bottom: 40px;
+          }
+          border-radius: 50%;
+          background: rgba($brand-primary-lighter, .60) url(../images/play-btn.png) no-repeat center left 32px;
+          @include media-breakpoint-down(xl) {
+            height: 55px;
+            width: 55px;
+            background-size: 21px;
+            background-position: center left 21px;
+          }
+          text-indent: -999999px;
+          transition: $transition-300;
+          &:hover {
+            background: rgba($brand-primary-lighter, .60) url(../images/play-btn.png) no-repeat center left 21px;
+            background-size: 21px;
+            transform: scale(1.15);
+          }
+          &:active {
+            background-color: rgba($white, 1);
+            background-image: url(../images/play-btn-hover.png);
+            @include media-breakpoint-down(md) {
+              background-size: 21px;
+              background-position: center left 21px;
+            }
+          }
+        }
+      }
+      .mejs-mediaelement {
+        opacity: 0;
+      }
+    }
+    &:hover {
+      .vjs-big-play-button {
+        background: rgba($brand-primary-lighter, .60) url(../images/play-btn.png) no-repeat center left 32px;
+        @include media-breakpoint-down(md) {
+          background-size: 21px;
+          background-position: center left 21px;
+        }
+      }
+    }
+    .vjs-big-play-button {
+      border: none;
+      transition: $transition-300;
+      position: absolute;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      &:hover {
+        transform: translateY(-50%) translateX(-50%) scale(1.08);
+      }
+      .vjs-icon-placeholder:before {
+        content: '';
+      }
+    }
+    &.vjs-paused {
+      .vjs-big-play-button {
+        display: block;
+      }
+    }
+  }
+  &.full-video-btn {
+    margin-bottom: 35px;
+    .video-btn {
+      left: 50% !important;
+      transform: translateX(-50%) translateY(-50%);
+      display: block;
+      &:hover {
+        transform: translateY(-50%) translateX(-50%) scale(1.08);
+      }
+    }
+  }
+  .video-btn,
+  .vjs-big-play-button {
+    width: 94px;
+    height: 94px;
+    @include media-breakpoint-down(md) {
+      width: 58px;
+      height: 58px;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+    border-radius: 50%;
+    background: rgba($brand-primary-lighter, .60) url(../images/play-btn.png) no-repeat center left 32px;
+    @include media-breakpoint-down(md) {
+      background-size: 21px;
+      background-position: center left 21px;
+    }
+    text-indent: -999999px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    &:hover {
+      background: rgba($brand-primary-lighter, .60) url(../images/play-btn.png) no-repeat center left 32px;
+      @include media-breakpoint-down(md) {
+        background-size: 21px;
+        background-position: center left 21px;
+      }
+      transform: translateY(-50%) scale(1.15);
+    }
+    &:active {
+      background-color: rgba($white, 1);
+      background-image: url(../images/play-btn-hover.png);
+      @include media-breakpoint-down(md) {
+        background-size: 21px;
+        background-position: center left 21px;
+      }
+    }
+  }
+}
+.wp-video {
+  .tab-content &,
+  .two-column-bg & {
+    background: transparent;
+
+    iframe {
+      background: transparent;
+    }
+
+    &:not(.show-video):not(.vjs-has-started) {
+      top: 50%;
+      transform: translateY(-50%);
+
+      .two-column-bg & {
+        top: auto;
+        transform: none;
+      }
+    }
+
+    &.vjs-paused {
+      top: 50%;
+      transform: translateY(-50%);
+
+      .two-column-bg & {
+        top: auto;
+        transform: none;
+      }
+    }
+
+    .vjs-poster {
+      display: none;
+    }
+
+    &.show-video,
+    &.vjs-has-started {
+      .vjs-tech {
+        opacity: 1;
+      }
+    }
+
+    .vjs-tech {
+      transition: $transition-300;
+      opacity: 0;
+    }
+  }
+}
+.mejs-inner {
+  .mejs-overlay-play {
+    &:hover {
+      .mejs-overlay-button {
+        background-position: center left 32px;
+      }
+    }
+
+    .mejs-overlay-button {
+      border-radius: 50%;
+      background: rgba($brand-primary-lighter, .60) url(../images/play-btn.png) no-repeat center left 32px;
+      width: 94px;
+      height: 94px;
+      @include media-breakpoint-down(md) {
+        width: 58px;
+        height: 58px;
+        padding: 0;
+        margin-bottom: 40px;
+      }
+      text-indent: -999999px;
+      transition: $transition-300;
+
+      &:hover {
+        background: rgba($brand-primary-lighter, .60) url(../images/play-btn.png) no-repeat center left 32px;
+        transform: scale(1.15);
+      }
+
+      &:active {
+        background-color: rgba($white, 1);
+        background-image: url(../images/play-btn-hover.png);
+        @include media-breakpoint-down(md) {
+          background-size: 21px;
+          background-position: center left 21px;
+        }
+      }
+    }
+  }
+}

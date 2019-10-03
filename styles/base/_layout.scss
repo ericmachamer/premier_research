@@ -1,0 +1,66 @@
+/* =================================================================================
+~ Layout
+================================================================================= */
+
+// general site wide layout adjustments...
+html,
+body {
+  height: 100%;
+}
+.content-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  overflow-x: hidden;
+}
+.main {
+  padding: 0;
+  > .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &.has-block {
+      padding-top: 0;
+    }
+  }
+  a {
+    color: $brand-primary-lighter;
+    &:hover {
+      color: $body-font;
+    }
+  }
+}
+
+#wpadminbar {
+  top: auto;
+  bottom: 0;
+  .menupop .ab-sub-wrapper,
+  .shortlink-input {
+    bottom: 100%;
+  }
+}
+
+.posts-list {
+  li {
+    margin-bottom: 40px;
+  }
+}
+
+.wp-block-separator {
+  border-color: $brand-primary-lighter;
+  border-width: 2px;
+  position: relative;
+  margin: 46px 0;
+}
+
+//Mobile gutters
+@include media-breakpoint-down(md) {
+  .container,
+  .col-12 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .row:not(.no-gutters) {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+}

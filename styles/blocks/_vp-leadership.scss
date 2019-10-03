@@ -1,0 +1,94 @@
+.vp-leadership {
+  .vp-leadership-holder {
+    overflow: auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    border-bottom: $brand-primary-lighter solid 1px;
+    @include media-breakpoint-down(md) {
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+    &:last-child {
+      border: none;
+    }
+    .leadership-img {
+      float: left;
+      width: 358px;
+      height: 358px;
+      max-width: 100%;
+      position: relative;
+      @include media-breakpoint-down(md) {
+        float: none;
+        &.no-image {
+          display: none;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        height: auto;
+        padding-top: 100%;
+      }
+      .leadership-img-holder {
+        background: center no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .leadership-content {
+      width: calc(100% - 358px);
+      float: left;
+      padding-left: 73px;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 40px;
+      }
+      .vp-title-line {
+        h3 {
+          color: $brand-primary-lighter;
+          font-family: $font-family-base;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          letter-spacing: .072rem;
+          text-transform: uppercase;
+          margin-bottom: 45px;
+          @include media-breakpoint-down(md) {
+            padding-bottom: 25px;
+          }
+        }
+      }
+      .name {
+        h2 {
+          margin: 0;
+          font-size: 3.6rem;
+          font-weight: 400;
+          font-family: $font-family-alt;
+        }
+      }
+      .title {
+        .text {
+          margin: 10px 0 0;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          font-weight: 700;
+        }
+      }
+      .content {
+        padding-top: 48px;
+        @include media-breakpoint-down(md) {
+          padding-top: 25px;
+        }
+        p {
+          margin: 10px 0 0;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          letter-spacing: .05rem;
+        }
+      }
+    }
+  }
+}

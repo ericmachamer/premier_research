@@ -1,0 +1,177 @@
+/* =================================================================================
+Variables
+================================================================================= */
+
+// Colors
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$brand-primary-lighter: #00AEEF;
+$brand-primary-light: #0078B5;
+$brand-primary: #00428B;
+$brand-secondary: #A6B200;
+$brand-secondary-light: #C1CD23;
+$brand-alt: #FC7400;
+$brand-alt-light: #F58220;
+$brand-success: #B2DBBF;
+$brand-info: #F3FFBD;
+$brand-warning: #f0ad4e;
+$brand-danger: #FF1654;
+
+$color-facebook: #3B5998;
+$color-twitter: #33CCFF;
+$color-google: #000000;
+$color-linkedin: #4875B4;
+$color-email: #ec0501;
+
+// Layout
+$grid-gutter-width: 30px;
+
+// Typography
+$body-font: #000000;
+$font-family-sans-serif: "Gotham Narrow A", "Gotham Narrow B", sans-serif;
+$font-family-serif: Georgia, serif;
+$font-family-icon: 'FontAwesome';
+$font-family-monospace: Monaco, Consolas, 'Courier New', monospace;
+
+//Base Fonts (Body)
+$font-family-base: $font-family-sans-serif;
+
+//Alt Fonts (Headers)
+$font-family-alt: "Gotham Rounded A", "Gotham Rounded B", sans-serif;
+
+$font-size-base: 1.8rem;
+
+// Z-Index
+$zindex-1: 1010;
+$zindex-2: 1020;
+$zindex-3: 1030;
+$zindex-4: 1040;
+$zindex-5: 1050;
+$zindex-6: 1060;
+$zindex-7: 1070;
+$zindex-8: 1080;
+$zindex-9: 1090;
+
+// Transitions
+$transition-200: all 200ms ease;
+$transition-300: all 300ms ease;
+$transition-1000: all 1000ms ease;
+
+$theme-colors: (
+        "primary":    $brand-primary,
+        "secondary":  $brand-secondary,
+        "success":    $brand-success,
+        "info":       $brand-info,
+        "warning":    $brand-warning,
+        "danger":     $brand-danger,
+        "light":      $gray-100,
+        "dark":       $gray-900
+);
+
+$grid-breakpoints: (
+    // Extra small screen / phone
+        xs: 0,
+    // Small screen / phone
+        sm: 576px,
+    // Medium screen / tablet
+        md: 768px,
+    // Large screen / desktop
+        lg: 992px,
+    // Extra large screen / wide desktop
+        xl: 1400px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 942px,
+        xl: 1134px
+);
+
+@keyframes transform-x {
+    0%   {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes transform-y {
+    0%   {
+        opacity: 0;
+        transform: translateY(250px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes opacity {
+    0%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes transform-foreground {
+    0%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes flipper {
+    0% {
+        transform: translateX(-50%) translateX(0);
+    }
+    20% {
+        transform: translateX(-50%) translateY(5px);
+    }
+    30% {
+        transform: translateX(-50%) translateX(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(5px);
+    }
+    60% {
+        transform: translateX(-50%) translateX(0);
+    }
+    100% {
+        transform: translateX(-50%) translateX(0);
+    }
+}
+@keyframes flipper-auto-center {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(5px);
+    }
+    30% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    60% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

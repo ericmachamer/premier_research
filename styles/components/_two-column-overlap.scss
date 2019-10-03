@@ -1,0 +1,64 @@
+.two-column-overlap {
+    &-holder,
+    &-content {
+        position: relative;
+        z-index: 100;
+    }
+    &-holder {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-bottom: 60px;
+        @include media-breakpoint-down(sm) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    &-content {
+        position: relative;
+        padding: 45px 60px;
+        background: $gray-900;
+        box-shadow: 0 0 15px 0 rgba($black,1);
+        h3 {
+            color: $white;
+            font-family: $font-family-sans-serif;
+            font-weight: 300;
+            img {
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 45px;
+            left: 0;
+            bottom: 45px;
+            width: 4px;
+            background: $brand-primary;
+        }
+    }
+    .background-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: no-repeat center;
+        background-size: cover;
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+    .content-align-right {
+        .two-column-overlap-content {
+            &:after {
+                left: auto;
+                right: 0;
+            }
+        }
+        .background-img {
+            right: auto;
+            left: 0;
+        }
+    }
+}

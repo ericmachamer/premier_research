@@ -1,0 +1,19 @@
+.map-block {
+    background: $black no-repeat center right 30vw;
+    height: 615px;
+    .row,
+    .container {
+        height: 100%;
+    }
+    .map-text {
+        h2 {
+            padding-bottom: 35px;
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 2rem;
+            font-family: $font-family-sans-serif;
+        }
+    }
+}

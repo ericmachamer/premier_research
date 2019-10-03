@@ -1,0 +1,43 @@
+.tradition-block {
+    height: 720px;
+    position: relative;
+    overflow: hidden;
+    &.active {
+        .tradition-text {
+            animation: transform-x 300ms linear forwards;
+        }
+    }
+    .row,
+    .container {
+        height: 100%;
+    }
+    .background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: calc(100% + 400px);
+        left: calc(50% + 200px);
+        transform: translateX(-50%);
+        .masonry-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: $transition-300;
+        }
+    }
+    .content {
+        position: relative;
+    }
+    .tradition-text {
+        background: $black;
+        padding: 70px 60px;
+        transform: translateX(100%);
+        opacity: 0;
+        h2 {
+            padding-bottom: 35px;
+        }
+        p {
+            font-size: 2.2rem;
+        }
+    }
+}

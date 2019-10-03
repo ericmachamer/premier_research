@@ -1,0 +1,317 @@
+/* =================================================================================
+Buttons
+================================================================================= */
+$scaleFactor: 1.08;
+.width-100 {
+  .col-10 {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.ripple-container {
+  display: none !important;
+}
+
+.btn,
+.wp-block-button__link,
+.gform_previous_button,
+.gform_next_button {
+  font-family: $font-family-sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+  line-height: 2rem;
+  .hero-cta-holder & {
+    @include media-breakpoint-down(lg) {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding-left: 43px;
+    padding-right: 43px;
+    .hero-cta-holder & {
+      width: 100%;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .home & {
+      padding: 15px 20px;
+    }
+  }
+  margin-top: 15px;
+  .header & {
+    margin-top: 0;
+  }
+  border-radius: 0;
+  border: none;
+  position: relative;
+  padding: 22px 44px;
+  transition: $transition-300;
+  &:hover,
+  &:focus {
+    background: transparent;
+  }
+  .tab-content &,
+  .card-footer & {
+    &:not(.video-btn) {
+      padding: 15px 22px;
+      width: auto !important;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+      @media (min-width: 1400px) {
+        padding: 15px 43px;
+      }
+    }
+  }
+  .header & {
+    padding: 10px 20px;
+  }
+  @include media-breakpoint-up(md) {
+    white-space: nowrap;
+  }
+  .full-btn & {
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+    }
+  }
+  /*&:after {
+    content: "";
+    display: inline-block;
+    margin: 0 0 0 7px;
+    position: relative;
+    top: -2px;
+    height: 7px;
+    width: 15px;
+    background: url(../images/icons-arrow-dark.png);
+  }*/
+  &.btn-raised {
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+      background: none;
+    }
+  }
+  &:active {
+  }
+  &.btn-xs {
+  }
+  &.btn-sm {
+    font-size: 1.4rem;
+    letter-spacing: 0.01rem;
+  }
+  &.btn-lg {
+  }
+  &.btn-primary {
+  }
+  &.btn-outline {
+    border: none;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: solid 2px;
+      transition: $transition-300;
+      z-index: -1;
+      .ie &,
+      .edge & {
+        z-index: 1;
+      }
+    }
+    &:hover {
+      &:before {
+        top: -3px;
+        bottom: -3px;
+        left: -3px;
+        right: -3px;
+      }
+    }
+  }
+  &.btn-outline-primary-light {
+    &:before {
+      border-color: $brand-primary-light;
+      .light & {
+        border-color: $body-color;
+      }
+    }
+    .dark & {
+      color: $white;
+      &:after {
+        background: url(../images/icons-arrow-light.png);
+      }
+    }
+    color: $black;
+    &:hover {
+      backface-visibility: hidden;
+    }
+    &:active {
+      &:before {
+        background: $brand-primary-light;
+      }
+      color: $white;
+    }
+  }
+  &.btn-outline-primary-lighter {
+    &:before {
+      border-color: $brand-primary-lighter;
+    }
+    color: $black;
+    .dark & {
+      color: $white;
+      &:after {
+        background: url(../images/icons-arrow-light.png);
+      }
+    }
+    &:hover {
+      backface-visibility: hidden;
+    }
+    &:active {
+      &:before {
+        background: $brand-primary-lighter;
+      }
+      color: $white;
+      &:after {
+        background: url(../images/icons-arrow-light.png);
+      }
+    }
+  }
+  &.btn-outline-white {
+    &:before {
+      border-color: $white;
+    }
+    color: $black;
+    .block-slider & {
+      color: $white;
+      &:after {
+        background: url(../images/icons-arrow-light.png);
+      }
+    }
+    .dark & {
+      color: $white;
+      &:after {
+        background: url(../images/icons-arrow-light.png);
+      }
+    }
+    &:active {
+      &:before {
+        background: $white;
+      }
+      color: $brand-primary-light;
+    }
+  }
+  &.btn-alt {
+    color: $white;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $brand-alt;
+      transition: $transition-300;
+      z-index: -1;
+      .ie &,
+      .edge & {
+        z-index: 1;
+      }
+    }
+    &:after {
+      background: url(../images/icons-arrow-light.png);
+    }
+    &:hover {
+      color: $white;
+      &:before {
+        top: -3px;
+        bottom: -3px;
+        left: -3px;
+        right: -3px;
+      }
+    }
+  }
+  &.btn-white {
+  }
+  &.btn-text {
+    padding: 10px 0;
+    font-weight: 500;
+    &:hover {
+      background: none;
+      color: $brand-primary-lighter;
+    }
+  }
+  &.btn-success {
+  }
+  &.btn-info {
+  }
+  &.btn-warning {
+  }
+  &.btn-danger {
+  }
+  &.btn-link {
+  }
+  &.btn-text {
+    &:after {
+    }
+  }
+}
+.hero-cta-holder {
+  margin-top: -15px;
+  .tab-pane & {
+    margin-top: 25px;
+  }
+  .row {
+    @include media-breakpoint-down(md) {
+      //might need this
+      //margin: 0;
+    }
+  }
+}
+
+.wp-block-button__link {
+  text-decoration: none !important;
+  color: $black !important;
+  font-family: "Gotham Narrow A","Gotham Narrow B",sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: .15rem;
+  line-height: 2rem;
+  margin-top: 15px;
+  border-radius: 0;
+  position: relative;
+  padding: 22px 44px;
+  transition: all .3s ease;
+  border: none !important;
+  text-transform: uppercase;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid 2px $brand-primary-lighter;
+    transition: $transition-300;
+    z-index: -1;
+    .ie &,
+    .edge & {
+      z-index: 1;
+    }
+  }
+  &:hover {
+    &:before {
+      top: -3px;
+      bottom: -3px;
+      left: -3px;
+      right: -3px;
+    }
+  }
+}

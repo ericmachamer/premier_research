@@ -1,0 +1,219 @@
+{
+    "key": "group_5c87e03fa0ae4",
+    "title": "Block Part: Width & Background",
+    "fields": [
+        {
+            "key": "field_5c87e04f2d8c3",
+            "label": "Width & Background",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5cacbdb084915",
+            "label": "Width",
+            "name": "block_width",
+            "type": "radio",
+            "instructions": "Width is always 100% on the homepage.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "normal-width": "Normal Width",
+                "full-width-section": "Full Width Section",
+                "full-width-content": "Full Width Content"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "normal-width",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c0ede96607c7",
+            "label": "Background",
+            "name": "background",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5c4f3c1be1a1c",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5c4f3c43e1a1d",
+                    "label": "Use Paralax Scrolling",
+                    "name": "use_paralax_scrolling",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5c4f3d5ae1a1e",
+                    "label": "Color",
+                    "name": "color",
+                    "type": "select",
+                    "instructions": "When an image is added this will become an overlay. So, use transparency.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "transparent": "Transparent",
+                        "primary": "Blue",
+                        "primary-grad": "Blue Gradient",
+                        "primary-light": "Light Blue",
+                        "primary-light-grad": "Light Blue Gradient",
+                        "secondary": "Green",
+                        "secondary-grad": "Green Gradient",
+                        "alt": "Orange",
+                        "alt-grad": "Orange Gradient",
+                        "light-gray": "Light Gray",
+                        "dark": "Black",
+                        "dark-grad": "Black Gradient"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5c4f4bb4f406a",
+                    "label": "Opacity",
+                    "name": "opacity",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c4f3d5ae1a1e",
+                                "operator": "!=",
+                                "value": "transparent"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 100,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/hero"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/two-column-background"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/leadership-hero"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/tabs"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/leadership-slider"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/podcast-inline"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1565624179
+}

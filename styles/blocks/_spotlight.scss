@@ -1,0 +1,133 @@
+.resources-wrapper {
+  padding: 140px 0 160px;
+  position: relative;
+  background: no-repeat center;
+  background-size: cover;
+  @include media-breakpoint-down(md) {
+    padding: 50px 0;
+  }
+  h2 {
+    color: $body-font;
+    font-size: 6rem;
+    font-family: $font-family-alt;
+    font-weight: 400;
+    @include media-breakpoint-down(md) {
+      font-size: 4.2rem;
+    }
+  }
+  h3.sh {
+    font-weight:400;
+    margin: 0 auto 15px;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: .05rem;
+    font-family: $font-family-sans-serif;
+    @include media-breakpoint-down(md) {
+      font-weight: 100;
+    }
+  }
+  .desc {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: .05rem;
+  }
+  &.transparent {
+    .card.btn {
+      box-shadow: unset;
+      background: transparent;
+    }
+  }
+  &:not(.transparent):not(.light-gray){
+    h2,
+    h3 {
+      color: $white;
+    }
+    color: $white;
+    .btn-outline {
+      color: $white;
+      &:after {
+        background-image: url(../images/icons-arrow-light.png);
+      }
+    }
+    .spotlight {
+      .spotlight-body {
+        .spotlight-title {
+          color: $white;
+        }
+      }
+    }
+  }
+  .spotlight {
+    margin-top: 30px;
+    min-width: 20%;
+    @include media-breakpoint-down(md) {
+      &-5 {
+        &:nth-child(3) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+    &.no-max-width {
+      max-width: none;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 20%;
+    }
+    &.btn {
+      background: $white;
+      padding: 0;
+      &:after {
+        display: none;
+      }
+    }
+    .spotlight-body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .spotlight-title {
+        color: $body-font;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 11px;
+        line-height: 2rem;
+      }
+      .spotlight-image {
+        img {
+          display: inline-block;
+          max-height: 133px;
+          width: auto;
+        }
+      }
+      .spotlight-image-under-text {
+        padding: 0 40px;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        font-weight: 400;
+        @include media-breakpoint-down(xl) {
+          padding: 0 20px;
+        }
+        @include media-breakpoint-down(lg) {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .extra-padding {
+    .btn {
+      padding-left: 29px;
+      padding-right: 29px;
+    }
+  }
+  .row.full-btn {
+    margin-top: 56px;
+    a {
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

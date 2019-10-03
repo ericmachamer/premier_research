@@ -1,0 +1,43 @@
+{
+    "key": "group_5cc372556692c",
+    "title": "Block Part: Custom Block Title",
+    "fields": [
+        {
+            "key": "field_5cc3711e3db1f",
+            "label": "",
+            "name": "Block Title",
+            "type": "text",
+            "instructions": "This area is used for ease of updating. This text will show up nowhere on the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Custom Block Title",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1556313482
+}

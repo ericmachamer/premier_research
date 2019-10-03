@@ -1,0 +1,34 @@
+.two-column-holder {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  h2 {
+    font-size: 3.5rem;
+    color: $black;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 2rem;
+    color: $gray-400;
+    padding-top: 15px;
+  }
+  .content-holder {
+    padding-top: 50px;
+    ul {
+      li {
+        padding: 10px 0 10px 37px;
+        background: url(../images/circle-arrow-solid.png) no-repeat center left;
+        color: $brand-primary;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .one_half {
+        margin-bottom: 0;
+      }
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,76 @@
+.brands-block {
+    background: $brand-primary;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: hidden;
+    &.has-background {
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            background: linear-gradient(to right, $black 0,rgba($black,0) 20%,rgba($black,0) 80%, $black 100%);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        h3,
+        p {
+            color: $white;
+        }
+        .brands-slider {
+            .slick {
+                &-arrow {
+                    background: url(../images/white-arrow.png) no-repeat center;
+                }
+            }
+        }
+    }
+    h3,
+    p {
+        color: $black;
+    }
+    h3 {
+        padding-bottom: 20px;
+        font-family: $font-family-sans-serif;
+        text-transform: uppercase;
+    }
+    p {
+        padding-bottom: 40px;
+    }
+    .brands-slider {
+        position: relative;
+        .slick {
+            &-arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                text-indent: -999999px;
+                background: url(../images/black-arrow.png) no-repeat center;
+                width: 14px;
+                height: 22px;
+                cursor: pointer;
+            }
+            &-next {
+                right: -30px;
+                transform: translateY(-50%) rotate(180deg);
+            }
+            &-prev {
+                left: -30px;
+            }
+        }
+        .slick-slide {
+            padding: 0 30px;
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            img {
+                max-width: 100%;
+                display: inline-block;
+                width: auto !important;
+            }
+        }
+    }
+}

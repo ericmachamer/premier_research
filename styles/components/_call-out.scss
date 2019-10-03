@@ -1,0 +1,25 @@
+.call-out {
+  margin-bottom: 50px;
+  &-holder {
+    background: $brand-primary;
+    padding: 15px 25px 25px;
+    box-shadow: 15px 15px 0 0 rgba(0,0,0,.15);
+    &-inner {
+      h4 {
+        color: $white;
+      }
+      p {
+        color: $white;
+        a {
+          color: $white;
+          text-decoration: underline;
+          transition: $transition-300;
+          &:hover {
+            color: $brand-secondary;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

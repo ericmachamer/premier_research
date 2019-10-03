@@ -1,0 +1,223 @@
+.single {
+  &.dark {
+    .post-title {
+      h3,
+      h1 {
+        color: $white !important;
+        a {
+          color: $white !important;
+        }
+      }
+    }
+  }
+  .background-overlay:not(.no-filter) {
+    filter: grayscale(100%);
+  }
+  .slides,
+  .podcast {
+    .background-overlay {
+      filter: unset;
+    }
+  }
+  &.container {
+    max-width: 1134px;
+    padding-bottom: 131px;
+  }
+  &.single-news {
+    .post-hero {
+      margin-bottom: 50px;
+    }
+    .sharing-options,
+    .tags {
+      margin-top: 25px;
+    }
+    .tags {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      a {
+        color: $brand-primary-lighter;
+        &:hover {
+          color: $body-font;
+        }
+      }
+    }
+    .sharing-options {
+      .addtoany_list {
+        a {
+          padding: 0 10px 0 0;
+        }
+      }
+    }
+  }
+  .post-hero {
+    position: relative;
+    padding-top: 37%;
+    margin-bottom: 97px;
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      right: 15px;
+      bottom: 0;
+      background: no-repeat center;
+      background-size: cover;
+      &:not(.no-filter) {
+        filter: grayscale(100%);
+      }
+    }
+  }
+  .post-title {
+    &.is-whitepaper {
+      position: relative;
+      padding-top: 60px;
+      padding-bottom: 80px;
+      .background-overlay {
+        width: 100vw;
+        top: -60px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+      }
+      h3,
+      h1 {
+        @include media-breakpoint-up(lg) {
+          max-width: 60%;
+        }
+        color: $body-font;
+        a {
+          color: $body-font;
+        }
+      }
+    }
+    h3 {
+      padding-top: 44px;
+      font-size: 1.6rem;
+      font-weight: 500;
+      font-family: $font-family-sans-serif;
+      line-height: 2.4rem;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      align-self: flex-start;
+      letter-spacing: 0.09rem;
+      @include media-breakpoint-down(md) {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        padding-top: 0;
+      }
+      a {
+        color: $brand-primary-lighter;
+      }
+    }
+
+    h1 {
+      margin: 0;
+      padding-top: 15px;
+      font-size: 4.8rem;
+      font-weight: 400;
+      font-family: $font-family-alt;
+      line-height: 5.2rem;
+      align-self: flex-start;
+      @include media-breakpoint-down(md) {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+      }
+    }
+    .by-date {
+      margin-top: 35px;
+      padding-top: 15px;
+      padding-bottom: 45px;
+      width: auto;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        width: 25%;
+        height: 1px;
+        background: $brand-primary-lighter;
+        position: absolute;
+        left: 15px;
+        top: 0;
+        @include media-breakpoint-down(lg) {
+          left: 30px;
+        }
+      }
+      p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        .vert-sep {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+  .content.has-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include media-breakpoint-down(md) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  figure {
+    max-width: 100%;
+  }
+  .content-block {
+    img {
+      max-width: 100%;
+    }
+    .has-iframe {
+      position: relative;
+      padding-top: 56.25%;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .content-block {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 400;
+      font-family: $font-family-alt;
+      strong {
+        font-weight: inherit;
+      }
+    }
+    h2 {
+      font-size: 3.2rem;
+    }
+    h3 {
+      font-size: 2.8rem;
+    }
+    h4 {
+      font-size: 2.4rem;
+    }
+    h5 {
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+    h6 {
+      font-size: 1.6rem;
+    }
+    p,
+    ul,
+    li {
+      font-weight: 400;
+    }
+  }
+}

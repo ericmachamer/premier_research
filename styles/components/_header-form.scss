@@ -1,0 +1,172 @@
+.header-form-holder {
+  position: absolute;
+  bottom: -60px;
+  left:15px;
+  right: 15px;
+  margin: 0;
+  @include media-breakpoint-down(sm) {
+    position: relative;
+  }
+  > .container {
+    background: linear-gradient(to bottom, rgba(30,44,50,0.7) 0%,rgba(30,44,50,1) 80%,rgba(30,44,50,1) 100%);
+    padding: 60px;
+    border-radius: 5px;
+    box-shadow: 0 0 32px 0 rgba(74,73,73,.18);
+  }
+  h3 {
+    margin: 0 0 13px;
+  }
+  .gform_heading {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    h3 {
+      font-size: 2.6rem;
+      color: $white;
+    }
+  }
+  .gform_body {
+    .gform_fields {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+      .gfield {
+        padding: 0;
+        position: relative;
+        label {
+          position: absolute;
+          top: 50%;
+          left: 25px;
+          transform: translateY(-50%);
+          transition: $transition-200;
+          font-size: 1.7rem;
+          color: $gray-400;
+          z-index: 100;
+          &:after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 0;
+            margin-top: 2px;
+            background: $brand-primary;
+            transition: $transition-200;
+          }
+        }
+        &.active {
+          label {
+            font-size: .6em;
+            top: 3px;
+            transform: none;
+            color: $black;
+            &:after {
+              width: 80%;
+            }
+          }
+        }
+        input, select {
+          width: 100%;
+          padding: 15px 25px;
+          font-size: 1.7rem;
+          border: none;
+          border-right: 1px solid $gray-300;
+          font-family: $font-family-base;
+          @include media-breakpoint-down(sm) {
+            border: none;
+            border-bottom: 1px solid $gray-300;
+          }
+        }
+        select {
+          position: relative;
+          background: $white;
+        }
+        select, .ginput_container_select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          height: 100%;
+          border-radius: 0;
+        }
+        .ginput_container_select {
+          &:after {
+            content: '';
+            background: url('../images/form-drop.png') no-repeat center;
+            background-size: contain;
+            width: 8px;
+            height: 15px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 25px;
+            color: $gray-400;
+          }
+        }
+        &.submit-col {
+          margin-right: 145px;
+          @include media-breakpoint-down(lg) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .gfieldset {
+      margin-bottom: 20px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .gform_fields {
+        .gfield {
+          &:first-child {
+            input, select {
+              border-radius: 5px 0 0 5px;
+              @include media-breakpoint-down(lg) {
+                border-radius: 0;
+              }
+            }
+          }
+          &:last-child {
+            input, select {
+              border-right: none;
+              border-radius: 0 5px 5px 0;
+              @include media-breakpoint-down(lg) {
+                border-radius: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .gform_footer {
+    display: inline-block;
+    position: absolute;
+    bottom: 18px;
+    right: 15px;
+    @include media-breakpoint-down(lg) {
+      display: block;
+      position: relative;
+      bottom: auto;
+      right: auto;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 20px;
+    }
+    input {
+      border: none;
+      border-radius: 5px;
+      padding: 19px 30px;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      color: $white;
+      background: $brand-secondary;
+      cursor: pointer;
+      &:hover {
+        background: darken($brand-secondary, 5%);
+      }
+    }
+  }
+}

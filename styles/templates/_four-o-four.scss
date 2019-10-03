@@ -1,0 +1,70 @@
+.error404 {
+  #primary {
+    padding-top: 100px;
+    @include media-breakpoint-down(md) {
+      padding-top: 0;
+    }
+    h1 {
+      font-size: 30rem;
+      letter-spacing: -.9rem;
+      font-weight: 400;
+      @include media-breakpoint-down(xl) {
+        font-size: 26.5rem;
+      }
+      @include media-breakpoint-down(lg) {
+        font-size: 22rem;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 35vw;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 4.6rem;
+      letter-spacing: -.138rem;
+      font-weight: 400;
+      font-family: $font-family-alt;
+      line-height: 1;
+      @include media-breakpoint-down(xl) {
+        font-size: 4rem;
+        text-align: center;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 6vw;
+      }
+    }
+
+    .search-form {
+      margin-top: 77px;
+      position: relative;
+
+      input {
+        font-size: 2.4rem;
+        color: #848484;
+        padding: 19px 25px 19px 62px;
+        height: auto;
+
+        &[type=submit] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          background: url(../images/search-icon.png) center center no-repeat;
+          background-size: 20px;
+          width: 66px;
+          padding: 0;
+          text-indent: -9999999px;
+          border: none;
+        }
+      }
+    }
+    .renderer-svg {
+      margin-top: -110px;
+      @include media-breakpoint-down(md) {
+        max-width: 50% !important;
+        margin: 0 auto;
+      }
+    }
+  }
+ }

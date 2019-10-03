@@ -1,0 +1,27 @@
+/* =================================================================================
+Search
+================================================================================= */
+.screen-reader-text {
+  display: none;
+}
+.search-form {
+  @include clearfix();
+  display: block;
+}
+
+.search-form input {
+  float: left;
+  height: 35px;
+  width: 100%;
+  border: 1px solid $gray-800;
+}
+
+.search-form-box {
+  padding: 0 10px;
+}
+
+.search-form-submit {
+  background: $brand-primary;
+  border: 0 none;
+  color: #fff;
+}

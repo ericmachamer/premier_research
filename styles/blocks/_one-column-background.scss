@@ -1,0 +1,120 @@
+.column-bg {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: top center no-repeat;
+  background-size: cover;
+  .page-id-2790 & {
+    padding: 50px 0;
+  }
+  &.has-video {
+    .container,
+    .row {
+      height: 100%;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-position: center !important;
+  }
+  .hero-cta-holder {
+    //padding-top: 50px;
+    a {
+      padding: 15px;
+      .btn {
+        margin: 0;
+      }
+    }
+  }
+  &.dark {
+    .heading {
+      h2 {
+        color: $white;
+      }
+      .intro-content {
+        color: $white;
+      }
+    }
+    #accordion {
+      .accordion-holder {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        .accordion-header {
+          .btn {
+            color: $white;
+          }
+        }
+        .accordion-body {
+          color: $white;
+        }
+      }
+    }
+    .content-block {
+      color: $white;
+    }
+    .cta-block {
+      .btn {
+        color: $white;
+      }
+    }
+  }
+  .container {
+    position: relative;
+  }
+  .heading {
+    h2 {
+      margin-bottom: 30px;
+      font-size: 4.8rem;
+      font-weight: 400;
+      @include media-breakpoint-down(md) {
+        font-size: 3.8rem;
+      }
+    }
+    .intro-content {
+      font-size: 2rem;
+      line-height: 2.9rem;
+      margin-bottom: 20px;
+      @include media-breakpoint-down(md) {
+        font-weight: 100;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+      }
+    }
+  }
+  .content-block {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.05rem;
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  #accordion {
+    .accordion-holder {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 14px 0;
+      &:last-child {
+        border: none;
+      }
+      .accordion-header {
+        .btn {
+          width: 100%;
+          text-align: left;
+          padding: 5px 0;
+          font-size: 1.8rem;
+          border-radius: 0;
+          transition: $transition-300;
+          &.collapsed {
+            opacity: 0.5;
+          }
+        }
+      }
+      .accordion-body {
+        .btn {
+          margin-top: 8px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+/* =================================================================================
+Sidebar
+================================================================================= */
+.sidebar {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.sidebar-menu {
+  margin-bottom: 35px;
+  h4 {
+    a {
+      color: $body-font;
+      &.active,
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0;
+      margin: 0;
+      &:before {
+        display: none;
+      }
+      &.current_page_item,
+      &.current-cat {
+        a {
+          color: $brand-primary;
+          border-bottom: 1px solid $brand-primary;
+          &:before {
+            background: transparent;
+            transform: translateX(0);
+          }
+        }
+      }
+      a {
+        display: block;
+        color: $body-font;
+        transition: $transition-300;
+        padding: 10px 5px;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid $body-font;
+        font-family: $font-family-sans-serif;
+        text-decoration: none !important;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: $brand-primary-light;
+          z-index: -1;
+          transition: $transition-300;
+          transform: translateX(-100%);
+        }
+        &:hover {
+          &:before {
+            transform: translateX(0);
+          }
+        }
+        &:active {
+          color: $white;
+          &:before {
+            background: $brand-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar-form {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: $brand-primary;
+  h4 {
+    color: $white;
+  }
+  p {
+    color: $white;
+    a {
+      color: $white;
+      &:hover {
+        color: $brand-secondary;
+      }
+    }
+  }
+  .gform_body {
+    @include make-container();
+  }
+  .gform_wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .gform_wrapper ul.gform_fields .gfield {
+    &.active {
+      label {
+        top: 0;
+      }
+    }
+    label {
+      z-index: 10;
+      left: 5px;
+      color: $gray-600;
+    }
+    input,
+    textarea {
+      border: none;
+      background: $white;
+      border-radius: 2px;
+    }
+  }
+  input[type=submit] {
+    width: 100%;
+    float: none;
+    color: $black;
+    background-image: linear-gradient(
+      to right,
+      $brand-primary,
+      $brand-primary 50%,
+      $brand-secondary 50%
+    );
+    &:hover {
+      color: $white;
+    }
+    &:active {
+      background-image: none;
+      color: $white;
+    }
+  }
+  .gform_confirmation_message {
+    background: rgba($white, .4);
+    padding: 15px;
+  }
+}

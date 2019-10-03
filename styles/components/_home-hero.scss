@@ -1,0 +1,56 @@
+    .header-hero {
+        min-height: 800px;
+        position: relative;
+        &.has-foreground {
+            background: no-repeat bottom right, no-repeat center top;
+            background-size: auto, cover;
+            @include media-breakpoint-down(lg) {
+                background-size: 460px, cover;
+            }
+            @include media-breakpoint-down(md) {
+                background-size: 0, cover;
+            }
+            opacity: 0;
+            .ready & {
+                animation: transform-foreground 500ms linear forwards;
+            }
+        }
+        .container {
+            position: absolute;
+            top: calc(50% + 70px);
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        h1 {
+            font-size: 5.4rem;
+            color: $white;
+        }
+        .sub-head {
+            font-family: $font-family-serif;
+            color: $white;
+            font-size: 2.6rem;
+            line-height: 4.4rem;
+        }
+        .highlight-box {
+            background: $brand-primary;
+            padding: 20px;
+            color: $white;
+            h3 {
+                color: $white;
+                font-size: 2.6rem;
+            }
+            p {
+                font-size: 1.9rem;
+                font-family: $font-family-serif;
+                line-height: 3rem;
+            }
+        }
+    }
+@keyframes transform-foreground {
+    0%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

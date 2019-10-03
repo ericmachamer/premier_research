@@ -1,0 +1,326 @@
+/* =================================================================================
+Form
+================================================================================= */
+
+.form {
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+.main {
+  .gform_fields {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    li {
+      margin: 0;
+      &:before {
+        display: none;
+      }
+    }
+    .gfield_description,
+    .warningTextareaInfo {
+      width: 100%;
+      font-weight: 400!important;
+      font-size: 1.4rem!important;
+    }
+    .ginput_container_date {
+      overflow: visible;
+      .ginput_container_date {
+        display: inline-block;
+        padding-right: 25px;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+    .ginput_container_name {
+      overflow: auto;
+    }
+    .ginput_container_name,
+    .ginput_container_address,
+    .gfield_radio,
+    .gfield_checkbox {
+      label {
+        margin-top: 6px;
+        font-weight: normal !important;
+        font-size: 1.4rem !important;
+      }
+      > span {
+        width: 30%;
+        float: left;
+        .page-template-page-contact & {
+          width: 50%;
+          &:first-child {
+            padding-right: 14px;
+          }
+          &:last-child {
+            padding-right: 0;
+            padding-left: 14px;
+          }
+        }
+        display: inline-block;
+        padding-right: 25px;
+        &.name_middle {
+          width: 13%;
+          @include media-breakpoint-down(lg) {
+            width: 17%;
+            padding-right: 0;
+          }
+          @include media-breakpoint-down(md) {
+            clear: both;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 50%;
+          }
+        }
+        &.name_suffix,
+        &.name_prefix {
+          width: 13%;
+          @include media-breakpoint-down(md) {
+            width: 17%;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 50%;
+          }
+        }
+        &.name_suffix {
+          padding-right: 0;
+          @include media-breakpoint-down(lg) {
+            width: 17%;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 50%;
+          }
+        }
+        &.name_last {
+          @include media-breakpoint-down(lg) {
+            width: 83%;
+          }
+          @include media-breakpoint-down(md) {
+            clear: left;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding-right: 0;
+          }
+        }
+        &.name_first {
+          @include media-breakpoint-down(lg) {
+            width: 70%;
+          }
+          @include media-breakpoint-down(md) {
+            width: 83%;
+            padding-right: 0;
+          }
+          @include media-breakpoint-down(sm) {
+            clear: left;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .gfield_checkbox {
+      li {
+        width: 100%;
+        flex: none !important;
+        max-width: 100% !important;
+      }
+    }
+    .gfield_radio,
+    .gfield_checkbox {
+      input {
+        width: auto !important;
+      }
+      label {
+        width: auto;
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 16px;
+      }
+    }
+    .ginput_container_address {
+      overflow: visible;
+      .ginput_full {
+        width: 100%;
+        padding-right: 0;
+      }
+      .ginput_left,
+      .ginput_right {
+        width: 50%;
+        float: left;
+        padding-right: 12px;
+      }
+      .ginput_right {
+        padding-right: 0;
+        padding-left: 13px;
+      }
+    }
+  }
+}
+.gform_wrapper {
+  @include make-container();
+  ul.gform_fields {
+    list-style: none;
+    @include make-row();
+    li {
+      list-style: none;
+    }
+    .gfield {
+      margin-bottom: 40px;
+      &_error {
+        input, textarea {
+          border-color: $brand-danger !important;
+        }
+      }
+      &.checkbox {
+        > label {
+        }
+      }
+      .gfield_checkbox {
+        @include make-row();
+        li {
+          @include make-col(6)
+        }
+      }
+      label {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+      input, textarea, .selectric {
+        width: 100%;
+        background: $white;
+        border: 1px solid #C4C4C4;
+        border-radius: 5px;
+        color: #999 !important;
+        padding: 15px !important;
+        transition: $transition-300;
+        margin-top: 15px;
+        font-size: 1.8rem;
+        .label {
+          height: 28px;
+          line-height: 28px;
+          color: #999;
+          font-size: 1.8rem;
+          width: 90%;
+        }
+        .button {
+          background: $white;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:focus {
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .2);
+        }
+      }
+      input {
+        padding: 0 15px;
+      }
+      .ginput_container_address {
+        width: 100%;
+      }
+    }
+  }
+  .gform_validation_container {
+    display: none;
+  }
+
+  .validation_error,
+  .validation_message {
+    color: $brand-danger;
+    margin-bottom: 15px;
+  }
+}
+.gform_footer {
+  button {
+    float: right;
+    font-family: $font-family-alt;
+  }
+}
+.gform_page_footer {
+  overflow: auto;
+  padding: 7px;
+  margin: -7px;
+  .gform_previous_button {
+    float: none !important;
+    &:after {
+      transform: rotate(-180deg);
+      float: left;
+      top: 6px;
+      margin: 0 5px 0 0;
+    }
+  }
+  .gform_next_button {
+    float: right;
+  }
+  .btn {
+    float: right;
+  }
+  .button {
+    border: none;
+    float: right;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: $brand-primary-lighter solid 2px;
+      transition: $transition-300;
+    }
+    &:hover {
+      &:before {
+        top: -3px;
+        bottom: -3px;
+        left: -3px;
+        right: -3px;
+      }
+    }
+  }
+}
+
+.gform_wrapper {
+  &.investigator-form_wrapper {
+    padding: 0;
+  }
+  &.contact-form_wrapper {
+    .contact-form {
+      .ginput_container_name {
+        > span {
+          padding-right: 7px;
+          @include media-breakpoint-down(lg) {
+            width: 100% !important;
+            padding-right: 0 !important;
+          }
+          &.name_last {
+            padding-right: 0;
+            padding-left: 8px;
+            @include media-breakpoint-down(lg) {
+              padding-left: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .investigator-form {
+    ul.gform_fields .gfield .selectric,
+    ul.gform_fields .gfield input,
+    ul.gform_fields .gfield textarea {
+      padding: 8px 15px !important;
+    }
+  }
+}

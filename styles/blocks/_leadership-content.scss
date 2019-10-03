@@ -1,0 +1,209 @@
+.content-block-holder {
+  padding: 100px 0;
+  position: relative;
+  &:not(:first-of-type) {
+    .wp-block-group & {
+      margin-top: -160px;
+      @include media-breakpoint-down(md) {
+        margin-top: -60px;
+      }
+    }
+  }
+  &.ta-experience-content {
+    .sidebar {
+      padding-left: 15px;
+    }
+  }
+  .content-columns {
+    .page-template-page-events & {
+      @include media-breakpoint-up(lg) {
+        @include make-col(7);
+      }
+    }
+  }
+  .image-bullets {
+    margin-top: 2rem;
+    @include media-breakpoint-down(md) {
+      margin-top: -15px;
+    }
+    .image-bullet-content {
+      overflow: auto;
+      .ie & {
+        overflow: hidden;
+      }
+      padding-bottom: 15px;
+      .bullet {
+        float: left;
+        width: 80px;
+        height: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        float: left;
+        width: calc(100% - 80px);
+        padding-left: 30px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        letter-spacing: -0.075rem;
+        font-family: $font-family-alt;
+        font-weight: 400;
+        @include media-breakpoint-down(md) {
+          font-size: 1.8rem;
+          line-height: 2.3rem;
+        }
+      }
+    }
+  }
+  .sidebar {
+    padding-top: 13px;
+    .page-template-page-events & {
+      @include media-breakpoint-up(lg) {
+        @include make-col(5);
+      }
+      .no-header {
+        img {
+          margin-top: 102px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding: 50px 0 15px;
+  }
+  .content-block {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 35px;
+    }
+    .page-template-page-events & {
+      a {
+        font-size: 2.6rem;
+        line-height: 3rem;
+        font-family: $font-family-alt;
+        font-weight: 400;
+      }
+    }
+  }
+  .image-block {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 35px;
+      img {
+        margin: 0 auto;
+      }
+    }
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 50px;
+      color: $brand-primary-lighter;
+    }
+    .below-image {
+      padding-top: 29px;
+      &.no-image {
+        padding-top: 0;
+      }
+      p {
+        color: $brand-primary-lighter;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        font-family: $font-family-base;
+        font-weight: 600;
+      }
+      a {
+        color: $body-color;
+        display: inline-block;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        line-height: 3.6rem;
+        /*&:after {
+          content: '';
+          display: inline-block;
+          margin: 0 0 0 7px;
+          position: relative;
+          top: -2px;
+          height: 7px;
+          width: 15px;
+          background: url(../images/icons-arrow-dark.png);
+        }*/
+        &:hover {
+          color: $brand-primary-light;
+        }
+      }
+    }
+  }
+  .button-holder {
+    .full-btn {
+      width: 100%;
+    }
+  }
+  .sidebar {
+    padding-left: 100px;
+  }
+}
+.content-block {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  * + h2 {
+    margin-top: 50px;
+  }
+  * + h3,
+  * + h4,
+  * + h5 {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    @include media-breakpoint-down(md) {
+      margin-top: 23px;
+    }
+  }
+  h2 {
+    padding: 0;
+    font-size: 4.2rem;
+    font-family: $font-family-alt;
+    font-weight: 400;
+    @include media-breakpoint-down(md) {
+      font-size: 3.4rem;
+    }
+  }
+  h5 {
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+  }
+  p {
+    @include media-breakpoint-down(md) {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+  }
+  * + p {
+    margin-top: 15px;
+  }
+  ul {
+    .main & {
+      padding: 0;
+    }
+    li {
+      &:before {
+        content: "\25AA";
+      }
+    }
+  }
+}
+
+.single-leadership {
+  .content-block-holder {
+    padding-top: 60px;
+  }
+  .content-block {
+    font-weight: 200;
+  }
+}

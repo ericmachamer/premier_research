@@ -1,0 +1,121 @@
+.highlight-container {
+  .highlights {
+    margin-top: -69px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 45px;
+    }
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+      box-shadow: 25px 25px 0 0 rgba(0,0,0,.15);
+    }
+    &-titles {
+      padding: 20px 0 40px 70px;
+      border-top: 20px solid transparent;
+      background: $brand-primary;
+      @include media-breakpoint-down(md) {
+        padding-left: 25px;
+      }
+      h2 {
+        color: $white;
+        font-size: 2.8rem;
+      }
+      .title {
+        color: $brand-primary-light;
+        @include media-breakpoint-down(md) {
+          color: $white;
+        }
+        font-size: 2.4rem;
+        padding: 7px 15px;
+        transition: $transition-300;
+        cursor: pointer;
+        @include media-breakpoint-down(md) {
+          cursor: auto;
+        }
+        span {
+          &:after {
+            content: '';
+            display: inline-block;
+            @include media-breakpoint-down(md) {
+              display: none;
+            }
+            width: 32px;
+            height: 19px;
+            background: url(../images/arrow-white.png) no-repeat center;
+            margin-left: 0;
+            opacity: 0;
+            transition: $transition-300;
+          }
+        }
+        &:hover {
+          span {
+            &:after {
+              opacity: 1;
+              margin-left: 20px;
+            }
+          }
+        }
+        &.active {
+          @include media-breakpoint-up(lg) {
+            color: $white;
+            background: $brand-primary;
+
+            span {
+              &:after {
+                opacity: 1;
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-content {
+      border-top: 20px solid $brand-primary;
+      background: $brand-primary;
+      color: $white;
+      position: relative;
+      overflow: hidden;
+      font-family: $font-family-serif;
+      transition: $transition-300;
+    }
+    .content {
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        overflow: auto;
+        z-index: 10;
+      }
+      padding: 40px 30px;
+      @include media-breakpoint-down(md) {
+        padding-top: 15px;
+      }
+      p {
+        font-size: 2rem;
+        line-height: 3.5rem;
+        @include media-breakpoint-down(md) {
+          color: $white;
+          font-size: 1.6rem;
+          line-height: 2.6rem;
+          margin-bottom: 5px;
+        }
+      }
+      &.active {
+        animation: transform-highlight-content 500ms linear forwards;
+        height: auto;
+        z-index: 100;
+      }
+    }
+  }
+}
+
+@keyframes transform-highlight-content {
+  0%   {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

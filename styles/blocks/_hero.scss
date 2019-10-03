@@ -1,0 +1,326 @@
+.header-hero {
+    min-height: 83vh;
+    z-index: 100;
+    overflow: visible;
+    @include media-breakpoint-down(md) {
+        min-height: unset;
+        .container {
+            padding-bottom: 300px;
+        }
+    }
+    position: relative;
+    background: no-repeat center top 70px;
+    background-size: cover;
+    &.management-team {
+        min-height: unset;
+        .container {
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            padding: 120px 30px;
+            @include media-breakpoint-down(md) {
+                padding: 50px 30px;
+            }
+        }
+    }
+    &:before {
+        content: '';
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $black;
+        transition: $transition-300;
+    }
+    &.job-details-hero {
+        min-height: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        .container {
+            position: relative;
+            transform: none;
+            left: auto;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            @include media-breakpoint-down(md) {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+        }
+    }
+    &.dark,
+    &.text-light {
+        h1,
+        .sub-head,
+        .hero-content p {
+            color: $white;
+        }
+    }
+    .foreground-img {
+        position: absolute;
+        bottom: -123px;
+        width: 930px;
+        left: 57vw;
+        transition: $transition-300;
+        @include media-breakpoint-down(md) {
+            width: auto;
+            position: relative;
+            bottom: auto !important;
+            max-width: 400px;
+            margin: 0;
+            left: 55%;
+            transform: translateX(-50%);
+        }
+    }
+    &.text-dark {
+        @include media-breakpoint-down(md) {
+            &:before {
+                opacity: .35;
+            }
+            h1,
+            .sub-head,
+            .hero-content p {
+                color: $white;
+            }
+        }
+    }
+    &.content-right {
+        &.has-foreground {
+            background-position: center top;
+        }
+        .foreground-img {
+            right: auto;
+            left: -50px;
+        }
+        .hero-content {
+            .row {
+                @include media-breakpoint-down(md) {
+                    justify-content: flex-end !important;
+                }
+            }
+        }
+    }
+    &.overlay {
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba($black, .45);
+        }
+    }
+    &.has-foreground {
+        background: no-repeat bottom right, no-repeat center top;
+        background-size: contain, cover;
+        @include media-breakpoint-down(lg) {
+            background-size: 460px, cover;
+        }
+        @include media-breakpoint-down(md) {
+            background-size: 45%, cover;
+            background-position: center bottom -50px, center top;
+        }
+        @include media-breakpoint-down(sm) {
+            background-size: 60%;
+        }
+        @include media-breakpoint-down(xs) {
+            background-size: 80%;
+        }
+        opacity: 0;
+        .ready & {
+            animation: transform-foreground 500ms linear forwards;
+        }
+    }
+    .container {
+        position: absolute;
+        top: calc(50% + 40px);
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        //max-width: map-get($container-max-widths, xxl);
+        @include make-container();
+        @include media-breakpoint-down(md) {
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            padding: 50px 30px;
+        }
+    }
+    &.header-leadership-hero {
+        .arrow {
+            bottom: 15px;
+            svg {
+                path {
+                    fill: $brand-primary-lighter;
+                }
+            }
+        }
+        &.has-foreground {
+            @include media-breakpoint-down(md) {
+                background-size: 45%, cover;
+                background-position: right bottom -50px, center top;
+            }
+            @include media-breakpoint-down(sm) {
+                background-position: right top, center top;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            min-height: 500px;
+            .container {
+                padding-bottom: 0;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            min-height: 0;
+        }
+        .container {
+            top: auto;
+            bottom: 60px;
+            transform: translateX(-50%);
+            @include media-breakpoint-down(md) {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            @include media-breakpoint-down(sm) {
+                position: relative;
+                left: auto;
+                transform: none;
+                padding-top: 230px;
+            }
+            h1 {
+                font-size: 4.8rem;
+                letter-spacing: 0;
+                font-weight: 400;
+                margin-bottom: 0;
+                @include media-breakpoint-down(sm) {
+                    font-size: 4rem;
+                }
+                &.light {
+                    color: $white;
+                }
+            }
+            .sub-head {
+                p {
+                    font-family: $font-family-alt;
+                    color: $brand-primary-lighter;
+                    font-size: 2.8rem;
+                    letter-spacing: -0.02rem;
+                    @include media-breakpoint-down(sm) {
+                        font-size: 2.5rem;
+                    }
+                }
+                &.light {
+                    p {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    h1 {
+        color: $black;
+        font-size: 6.4rem;
+        font-weight: 300;
+        @include media-breakpoint-down(md) {
+            font-size: 4.2rem;
+        }
+        strong {
+            font-size: 4.8rem;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        sup {
+            font-size: 3.8rem
+        }
+    }
+    .sub-head {
+        font-family: $font-family-sans-serif;
+        color: $black;
+        font-size: 2rem;
+        line-height: 3rem;
+        &:first-of-type {
+            margin-top: 10px;
+        }
+    }
+    .hero-content {
+        p {
+            color: $black;
+            font-size: 3rem;
+            letter-spacing: -.01rem;
+            line-height: 4.4rem;
+            @include media-breakpoint-down(md) {
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
+    .hero-cta-holder {
+        margin-top: 31px;
+        .btn {
+            width: 100%;
+            @include media-breakpoint-down(md) {
+                color: $white;
+            }
+            &-link {
+                color: $black;
+                font-weight: 300;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .arrow {
+        position: absolute;
+        bottom: 50px;
+        .ie & {
+            bottom: 0;
+        }
+        @include media-breakpoint-down(md) {
+            bottom: 15px;
+        }
+        left: 50%;
+        transform: translateX(-50%);
+        animation: flipper 1.25s infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: normal;
+        cursor: pointer;
+        transition: $transition-300;
+        &:hover {
+            opacity: .8;
+        }
+        svg {
+            width: 140px;
+            height: auto;
+            @include media-breakpoint-down(md) {
+                width: 80px;
+            }
+            path {
+                fill: $gray-400;
+            }
+        }
+        &.blue {
+            svg {
+                path {
+                    fill: $brand-primary-light;
+                }
+            }
+        }
+        &.white {
+            svg {
+                path {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}

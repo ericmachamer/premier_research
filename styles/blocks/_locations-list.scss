@@ -1,0 +1,99 @@
+.locations-list {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .has-background {
+    position: relative;
+  }
+  .background-overlay {
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -80px;
+    bottom: -80px;
+    height: auto;
+  }
+  .page-title {
+    font-size: 6rem;
+    line-height: 7rem;
+    font-family: $font-family-alt;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+  .location-details {
+    padding-bottom: 40px;
+    &.united-states {
+      .sub-details {
+        &:first-of-type {
+          h3 {
+            margin-top: 0 !important;
+          }
+        }
+        h3 {
+          margin-top: 35px !important;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        column-count: 2;
+        .sub-details {
+          -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+          break-inside: avoid;
+          margin-top: 25px;
+          &:first-of-type {
+            margin-top: 0;
+          }
+        }
+      }
+      @media (max-width: 481px) {
+        column-count: 1;
+      }
+    }
+  }
+  .locations {
+    display: block;
+    &:not(.us) {
+      column-count: 2;
+      @media (max-width: 481px) {
+        column-count: 1;
+      }
+    }
+    .location-holder {
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      &:first-of-type {
+        h2 {
+          margin-top: 0;
+        }
+      }
+      h2 {
+        font-size: 3.2rem;
+        font-weight: 400;
+        margin-top: 0;
+      }
+      h3 {
+        color: $brand-primary-lighter;
+        font-size: 1.8rem;
+        font-weight: 400;
+        font-family: $font-family-sans-serif;
+        margin-bottom: 2px;
+        margin-top: 25px;
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+      .address,
+      .contact-methods {
+        font-weight: 400;
+      }
+      .contact-methods {
+        margin-top: 12px;
+        color: $brand-primary-light;
+        .unstyle,
+        a {
+          color: $body-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,192 @@
+.two-column-bg {
+  position: relative;
+  overflow: hidden;
+  .heading {
+    h3 {
+      color: $white;
+      font-size: 1.6rem;
+      font-family: $font-family-base;
+      font-weight: 400;
+      letter-spacing: .15rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+  }
+  .content-block {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+  .container,
+  .row {
+    height: 100%;
+  }
+  .background-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120%;
+    @include media-breakpoint-down(md) {
+      height: 100%;
+    }
+    width: 100%;
+  }
+  .hero-cta-holder {
+    @include media-breakpoint-down(md) {
+      .row {
+        margin-left: -15px;
+      }
+    }
+    .justify-content-center {
+      justify-content: left !important;
+    }
+  }
+  .column-bg {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    @include media-breakpoint-down(md) {
+      background-size: cover;
+    }
+    &.has-video {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      .video-btn {
+        left: -45px;
+      }
+      &.has-content {
+
+        .video-btn-holder {
+          top: 50%;
+          position: absolute;
+          transform: translateY(-50%);
+          z-index: 100;
+          .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            background: $brand-primary-lighter;
+            color: $white;
+            border-radius: 50%;
+            z-index: 100;
+            cursor: pointer;
+            text-indent: -99999px;
+            &:before {
+              content: 'X';
+              display: inline-block;
+              position: absolute;
+              top: calc(50% + 2px);
+              left: calc(50% + 1px);
+              transform: translateY(-50%) translateX(-50%);
+              text-indent: 0;
+            }
+          }
+          .wp-video {
+            top: auto;
+            transform: none;
+            &.playing {
+              position: absolute;
+              transform: translateY(-50%) translateX(-50%);
+              @include media-breakpoint-down(md) {
+                transform: translateY(-50%);
+              }
+              &:before {
+                content: '';
+                display: block;
+                position: fixed;
+                top: -100vh;
+                left: -100vh;
+                right: -100vh;
+                bottom: -100vh;
+                background: rgba(0,0,0,.36);
+              }
+            }
+          }
+          @include media-breakpoint-down(lg) {
+            top: 40%;
+          }
+          @include media-breakpoint-down(md) {
+            top: 10%;
+          }
+          .mejs-overlay-button {
+            left: 70%;
+            @include media-breakpoint-down(lg) {
+              left: 90%;
+            }
+            @include media-breakpoint-down(md) {
+              left: 50%;
+            }
+          }
+        }
+        .video-content {
+          @include media-breakpoint-up(lg) {
+            @include make-col(8);
+          }
+        }
+      }
+      .heading {
+        @include media-breakpoint-up(lg) {
+          padding-bottom: 60px;
+        }
+        h2 {
+          font-size: 1.2rem;
+          font-family: $font-family-base;
+          font-weight: 300;
+          text-transform: uppercase;
+          letter-spacing: .2rem;
+        }
+      }
+      .content-block {
+        @include media-breakpoint-down(md) {
+          padding-top: 90px;
+        }
+        .name {
+          font-family: $font-family-alt;
+          font-size: 3.6rem;
+          font-weight: 400;
+          line-height: 4.2rem;
+        }
+        .title {
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          padding-top: 5px;
+          letter-spacing: .3rem;
+        }
+        .description {
+          padding-top: 10px;
+          font-size: 1.8rem;
+          @include media-breakpoint-down(md) {
+            position: relative;
+            margin-bottom: -50px;
+            padding-top: 17px;
+            padding-bottom: 22px;
+            margin-top: 24px;
+            z-index: 10;
+            &:before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 50%;
+              width: 100vw;
+              transform: translateX(-50%);
+              background: $black;
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .hero-cta-holder {
+      position: relative;
+      margin-bottom: -50px;
+      padding-top: 24px;
+      padding-bottom: 34px;
+    }
+  }
+}

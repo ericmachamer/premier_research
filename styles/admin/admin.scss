@@ -1,0 +1,146 @@
+@import "../vendor/normalize";
+.js .tmce-active .wp-editor-area {
+  color: #000 !important;
+}
+.editor-writing-flow {
+  height: auto;
+}
+.components-toolbar {
+  overflow: hidden;
+}
+.editor-styles-wrapper {
+  @import "editor";
+  a.acf-icon.dark {
+    color: #eee;
+  }
+}
+.acf-5050 {
+  .acf-row {
+    width: 50%;
+    float: left;
+    position: relative;
+    &:nth-child(odd) {
+      clear: left;
+    }
+    .acf-row-handle{
+      &.order {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translateY(-50%) translateX(-50%);
+        }
+      }
+      &.remove {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+      }
+    }
+    .acf-fields {
+      display: inline-block;
+      min-width: calc(100% - 32px);
+      margin-left: 16px;
+      min-height: 320px;
+    }
+  }
+}
+
+body.login {
+  $loginCol: #2c99ce;
+
+  position: relative;
+  min-height: 100%;
+  background: url("../images/login-bg.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+
+
+  #login {
+    //@include linear-gradient(#fff, #ebebeb);
+    background-image: linear-gradient(#fff, #ebebeb);
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 10%;
+    width: 375px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 20px 40px rgba(#000, .5);
+
+    h1 {
+      border-bottom: 1px solid #ddd;
+      a {
+        width: 100%;
+        height: 100px;
+        margin: 0;
+        background: url("../images/theedigital-logo.png") no-repeat center;
+      }
+    }
+
+    form {
+      padding: 0 40px;
+      background: none;
+      box-shadow: none;
+
+      label {
+        color: $loginCol;
+      }
+
+    }
+
+    p {
+      &#nav,
+      &#backtoblog {
+        text-align: center;
+        margin-top: 0;
+      }
+      &.forgetmenot {
+      }
+      &.submit {
+        padding: 20px 0;
+        clear: both;
+        float: none;
+        text-align: center;
+        input[type=submit] {
+          margin: 0;
+          float: none;
+          width: 100%;
+          height: 50px;
+          box-shadow: none;
+          font-size: 22px;
+          text-shadow: none;
+          text-transform: uppercase;
+          border: 0;
+          background: $loginCol;
+          border-radius: 25px;
+          &:hover,
+          &:active {
+            background-color: darken($loginCol, 5%);
+          }
+        }
+      }
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #cccccc;
+      a {
+        font-weight: 700;
+        color: #000;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

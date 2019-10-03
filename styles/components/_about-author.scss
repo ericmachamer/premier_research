@@ -1,0 +1,43 @@
+.about-author-holder {
+  margin-top: 40px;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    height: 1px;
+    background: $brand-primary-lighter;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: 0;
+  }
+  .details {
+    h2 {
+      padding-top: 44px;
+      font-size: 1.6rem;
+      font-weight: 400;
+      font-family: $font-family-sans-serif;
+      line-height: 2.4rem;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      align-self: flex-start;
+      letter-spacing: .09rem;
+      color: $brand-primary-lighter;
+    }
+    h3 {
+      margin: 0;
+      padding-top: 15px;
+      font-size: 2.4rem;
+      font-weight: 400;
+      font-family: $font-family-alt;
+      line-height: 3.4rem;
+      letter-spacing: .09rem;
+      align-self: flex-start;
+    }
+    p {
+      padding-top: 15px;
+      font-size: 1.4rem;
+      line-height: 2.6rem;
+    }
+  }
+}

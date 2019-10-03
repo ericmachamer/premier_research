@@ -1,0 +1,32 @@
+.child-block {
+
+    .block {
+        padding-top: 55px;
+        padding-bottom: 55px;
+        min-height: 100vh;
+        &:not(:last-child) {
+            border-bottom: $gray-900 solid 1px;
+        }
+        &.active {
+            .block-text {
+                animation: opacity 300ms linear forwards;
+            }
+            img {
+                animation: transform-x 300ms linear forwards;
+            }
+        }
+        h2 {
+            border: none;
+        }
+        .btn {
+            margin-top: 25px;
+        }
+        .block-text {
+            opacity: 0;
+        }
+        img {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+}

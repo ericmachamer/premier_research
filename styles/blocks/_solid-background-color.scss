@@ -1,0 +1,42 @@
+.background-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.solid-background-{
+  &primary {
+    background-color: $brand-primary;
+  }
+  &primary-grad {
+    background: linear-gradient(to bottom, $brand-primary 0%,$brand-primary-lighter 100%);
+  }
+  &primary-light {
+    background-color: $brand-primary-light;
+  }
+  &primary-light-grad {
+    background: linear-gradient(to bottom, $brand-primary-light 0%,$brand-primary-lighter 100%);
+  }
+  &secondary {
+    background-color: $brand-secondary;
+  }
+  &secondary-grad {
+    background: linear-gradient(to bottom, $brand-secondary 0%,$brand-secondary-light 100%);
+  }
+  &alt {
+    background-color: $brand-alt;
+  }
+  &alt-grad {
+    background: linear-gradient(to bottom, $brand-alt 0%,$brand-alt-light 100%);
+  }
+  &light-gray {
+    background-color: #f0f0f0;
+  }
+  &dark {
+    background-color: $gray-900;
+  }
+  &dark-grad {
+    background: linear-gradient(to bottom, $gray-900 0%,$gray-700 100%);
+  }
+}

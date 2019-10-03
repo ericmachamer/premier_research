@@ -1,0 +1,99 @@
+.expert-holder {
+  .heading {
+    h2 {
+      color: $white;
+      margin-bottom: 55px;
+      text-align: left !important;
+      @include media-breakpoint-down(sm) {
+        text-align: center !important;
+      }
+    }
+  }
+  .expert-content {
+    overflow: auto;
+    position: relative;
+    .headshot {
+      width: 291px;
+      height: 291px;
+      background: center no-repeat;
+      background-size: cover;
+      float: left;
+      @include media-breakpoint-down(md) {
+        width: 230px;
+        height: 230px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        height: auto;
+        padding-top: 100%;
+      }
+    }
+    .leader {
+      float: left;
+      width: calc(100% - 291px);
+      padding-left: 30px;
+      @include media-breakpoint-down(md) {
+        width: calc(100% - 230px);
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        padding-top: 35px;
+        padding-left: 0;
+      }
+      .leadership-text {
+        padding-bottom: 98px;
+        @include media-breakpoint-down(md) {
+          padding-bottom: 0;
+        }
+        text-align: left !important;
+        .name {
+          h2 {
+            color: $white;
+            font-weight: 400;
+            font-size: 3.6rem;
+            margin-bottom: 8px;
+          }
+        }
+        .title {
+          .text {
+            color: $white;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+          }
+        }
+        .excerpt {
+          padding-top: 35px;
+          p {
+            color: $white;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+          }
+        }
+        .cta-holder {
+          position: absolute;
+          bottom: 0;
+          left: 337px;
+          @include media-breakpoint-down(md) {
+            position: relative;
+            bottom: auto;
+            left: auto;
+            padding-top: 25px;
+          }
+          .btn {
+            margin-top: 0;
+            padding-left: 45px;
+            padding-right: 45px;
+            margin-right: 27px;
+            @include media-breakpoint-down(md) {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.timeline-slider-holder {
+    margin-bottom: 50px;
+}
+.timeline-block {
+    background-image: url(../images/pavement-bg.jpg);
+    padding-top: 60px;
+    padding-bottom: 80px;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to right,#000 0,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 80%,#000 100%)
+    }
+    .timeline-slider,
+    .timeline-header {
+        z-index: 100;
+        position: relative;
+    }
+    .slick-slide {
+        margin-left: -55px;
+        @include media-breakpoint-down(md) {
+            margin-left: 0;
+        }
+        .timeline {
+            padding: 40px 100px 0 0;
+            @include media-breakpoint-down(md) {
+                padding: 40px 0 0 0;
+            }
+            position: relative;
+            .timeline-date {
+                font-size: 12rem;
+                font-family: $font-family-sans-serif;
+                font-weight: 800;
+                position: absolute;
+                top: -40px;
+                left: 55px;
+                z-index: 100;
+            }
+            .timeline-content {
+                padding: 80px 55px 30px;
+                position: relative;
+                background: $gray-900;
+                @include media-breakpoint-up(lg) {
+                    min-height: 350px;
+                }
+                &-text {
+                    &.has-picture {
+                        padding-right: 260px;
+                        @include media-breakpoint-down(md) {
+                            padding-right: 0;
+                            padding-top: 200px;
+                        }
+                    }
+                }
+                &-img {
+                    background: no-repeat center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 295px;
+                    @include media-breakpoint-down(md) {
+                        width: auto;
+                        left: 0;
+                        bottom: auto;
+                        height: 250px;
+                        background-position: top;
+                    }
+                }
+            }
+        }
+    }
+    .slick-arrow {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 22px;
+        width: 14px;
+        text-indent: -999999px;
+        background: url(../images/white-arrow.png) no-repeat center;
+        cursor: pointer;
+        opacity: 1;
+        transition: $transition-300;
+        &.slick-disabled {
+            opacity: 0;
+        }
+        &.slick-next {
+            transform: rotate(180deg);
+        }
+        &.slick-prev {
+            right: 66px;
+        }
+    }
+    .slick-dots {
+        padding-top: 44px;
+        padding-left: 0;
+        li {
+            display: inline-block;
+            text-indent: -999999px;
+            width: 10px;
+            height: 10px;
+            background: $white;
+            margin-right: 18px;
+            transition: $transition-300;
+            cursor: pointer;
+            &.slick-active,
+            &:hover {
+                background: $brand-primary;
+            }
+        }
+    }
+}

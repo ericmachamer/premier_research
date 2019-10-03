@@ -1,0 +1,101 @@
+.testimonial-slider-holder {
+    background: url(../images/pavement-bg.jpg);
+    position: relative;
+    padding: 80px 0;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: -webkit-gradient(linear,left top,right top,from(black),color-stop(20%,rgba(0,0,0,0)),color-stop(80%,rgba(0,0,0,0)),to(black));
+        background: linear-gradient(to right,#000 0,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 80%,#000 100%);
+    }
+    .testimonials-block {
+        position: relative;
+        z-index: 100;
+        h3 {
+            margin-bottom: 85px;
+            font-family: $font-family-sans-serif;
+            text-transform: uppercase;
+            color: $white;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: -45px;
+                transform: translateX(-50%);
+                width: 137px;
+                height: 112px;
+                background: url(../images/quote-large.png) no-repeat center;
+            }
+        }
+        .testimonial-content {
+            p {
+                font-weight: 300;
+                font-size: 3.5rem;
+                line-height: 4.5rem;
+                font-family: $font-family-sans-serif;
+                font-style: italic;
+            }
+        }
+        .slick {
+            &-arrow {
+                position: absolute;
+                top: 40%;
+                transform: translateY(-50%);
+                text-indent: -999999px;
+                background: url(../images/white-arrow.png) no-repeat center;
+                width: 14px;
+                height: 22px;
+                cursor: pointer;
+            }
+            &-next {
+                right: -150px;
+                transform: translateY(-50%) rotate(180deg);
+            }
+            &-prev {
+                left: -150px;
+            }
+        }
+        .slick-dots {
+            text-align: center;
+            margin-top: 45px;
+            li {
+                display: inline-block;
+                button {
+                    height: 10px;
+                    width: 10px;
+                    background: $white;
+                    transition: $transition-200;
+                    margin: 0 5px;
+                    cursor: pointer;
+                    line-height: 0;
+                    text-indent: -999999px;
+                }
+                &.slick-active,
+                &:hover {
+                    button {
+                        background: $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+.testimonials-block {
+	padding-top: 35px;
+	padding-bottom: 35px;
+	.testimonial {
+		padding-bottom: 35px;
+		a {
+			color: $brand-primary;
+			transition: $transition-300;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}

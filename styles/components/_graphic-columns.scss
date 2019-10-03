@@ -1,0 +1,85 @@
+.graphic-columns {
+  padding-top: 55px;
+  padding-bottom: 100px;
+  &.active {
+    .columns {
+      .col {
+        animation: transform-y 300ms linear forwards;
+      }
+    }
+  }
+  .header {
+    color: $black;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .below-header {
+    color: $gray-400;
+    font-size: 2rem;
+  }
+  .columns {
+    margin-top: 55px;
+    .col {
+      body:not(.wp-admin) & {
+        opacity: 0;
+        transform: translateY(250px);
+      }
+      border-right: 1px solid $gray-300;
+      overflow: hidden;
+      min-height: 63px;
+      &:hover {
+        cursor: pointer;
+        a {
+          color: $brand-primary;
+        }
+      }
+      &:last-child {
+        border: none;
+      }
+      @include media-breakpoint-down(md) {
+        border: none;
+        margin-top: 50px;
+        &:nth-child(1), &:nth-child(2) {
+          margin-top: 0;
+        }
+        &:nth-child(odd) {
+          border-right: 1px solid $brand-secondary;
+        }
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+    .icons {
+      display: inline-block;
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      img {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+      }
+    }
+    a {
+      display: inline-block;
+      color: $body-font;
+      font-size: 2.2rem;
+      font-weight: 300;
+      padding-left: 90px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      @include media-breakpoint-down(md) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  @for $i from 1 through 10 {
+    .columns .col:nth-child(#{$i}n) {
+      animation-delay: #{$i * .15}s;
+    }
+  }
+}

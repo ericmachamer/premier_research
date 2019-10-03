@@ -1,0 +1,26 @@
+.posts-list {
+  .row {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid $brand-secondary;
+    position: relative;
+    &:last-child {
+      border: none;
+      margin-bottom: 0;
+    }
+    .thumb-holder {
+      height: 250px;
+      background: no-repeat center top;
+      background-size: cover;
+      margin-bottom: 25px;
+      border-radius: 2px;
+    }
+    .post-excerpt {
+      overflow: auto;
+      .btn {
+        float: right;
+        margin-top: 15px;
+      }
+    }
+  }
+}

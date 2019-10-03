@@ -1,0 +1,19 @@
+.form-cta-holder {
+    background: center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 120px 0;
+    h2 {
+        margin-bottom: 20px;
+        color: $white;
+    }
+    p {
+        color: $white;
+        font-family: $font-family-sans-serif;
+        font-size: 2.2rem;
+    }
+    .gform_confirmation_wrapper {
+        text-align: center;
+        margin-top: 25px;
+    }
+}

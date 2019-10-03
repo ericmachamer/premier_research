@@ -1,0 +1,43 @@
+{
+    "key": "group_5d405cdd57855",
+    "title": "Location",
+    "fields": [
+        {
+            "key": "field_5d405ce2b8ca4",
+            "label": "",
+            "name": "post_location",
+            "type": "text",
+            "instructions": "Enter the location of the news article.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "content-type:news"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1564499264
+}

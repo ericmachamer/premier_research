@@ -1,0 +1,54 @@
+.experts-loading-holder,
+.related-experts,
+.expert-slides {
+  background: #f9f9f9;
+  @include media-breakpoint-down(md) {
+    .container {
+      padding: 0;
+    }
+  }
+  position: relative;
+  .slides {
+    position: relative;
+    width: 100%;
+    h2 {
+      font-size: 3.6rem;
+    }
+    .overlay {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f9f9f9;
+    }
+    &.gray {
+      .overlay {
+        background: #f8f8f8;
+      }
+      color: $body-color;
+      h2,
+      h3 {
+        color: $body-color;
+      }
+    }
+    .slide {
+      .card-footer {
+        .btn {
+          color: $body-font;
+          &:before {
+            border-color: #00aeef;
+          }
+        }
+      }
+    }
+  }
+
+  color: $body-font;
+  h2,
+  h3 {
+    color: $body-font;
+  }
+}

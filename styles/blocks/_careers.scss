@@ -1,0 +1,136 @@
+.careers-holder {
+  &-inner {
+    border: $gray-300 solid 2px;
+    background-color: $white;
+    padding: 25px 0;
+    .careers {
+      margin: 0;
+      padding: 0;
+      .default-message {
+        padding: 0 25px;
+      }
+      li {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        transition: $transition-300;
+        @media (max-width: 481px) {
+          border-bottom: 1px solid $black;
+          .row .text-right {
+            margin-top: 8px;
+            text-align: left !important;
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+        cursor: pointer;
+        .row {
+          padding: 10px 25px;
+        }
+        &:before {
+          display: none;
+        }
+        .row:hover {
+          background: $brand-primary-light !important;
+          color: $white;
+          p,
+          a {
+            color: $white;
+          }
+        }
+        .inner {
+          margin: 0;
+          display: none;
+          li {
+            padding: 25px 35px;
+            &:nth-child(even) {
+              background: rgba($brand-primary-lighter, 0.1);
+            }
+            .job-title {
+              margin-bottom: 2px;
+            }
+            .job-locations,
+            .job-locations-title {
+              font-size: 1.2rem;
+              &-title {
+                margin-bottom: 2px;
+              }
+            }
+          }
+        }
+        h4 {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .careers-filters {
+    padding-bottom: 43px;
+    .selectric-wrapper {
+      .selectric {
+        cursor: pointer;
+        .label {
+          color: $white;
+          font-size: 1.8rem;
+          height: 46px;
+          line-height: 46px;
+          padding-left: 20px;
+          margin: 0;
+        }
+        &-items {
+          background: linear-gradient(to bottom, #000000 0%, #838383 100%);
+          box-shadow: none;
+          ul {
+            margin: 0;
+            padding: 0 0 30px;
+            li {
+              color: $white;
+              margin: 0;
+              font-size: 1.8rem;
+              padding: 8px 40px;
+              &:hover,
+              &.highlighted {
+                background: $brand-primary-lighter;
+              }
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .button {
+        height: 46px;
+        background: url(../images/triangle-down.svg) center no-repeat;
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &:first-child {
+      .selectric-wrapper {
+        .selectric,
+        .button {
+          background-color: $brand-primary-light;
+        }
+      }
+    }
+    &:nth-child(2) {
+      .selectric-wrapper {
+        .selectric,
+        .button {
+          background-color: $brand-primary-lighter;
+        }
+      }
+    }
+    &:nth-child(3) {
+      .selectric-wrapper {
+        .selectric,
+        .button {
+          background-color: $gray-600;
+        }
+      }
+    }
+  }
+}
